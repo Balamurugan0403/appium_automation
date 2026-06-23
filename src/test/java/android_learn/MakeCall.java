@@ -38,11 +38,41 @@ public class MakeCall {
 
         System.out.println("Current package = " + driver.getCurrentPackage());
     }
+
     @Test
     public void callFirstRecentContact() throws InterruptedException {
         driver.findElement(
                 AppiumBy.xpath("(//android.widget.ImageView[@resource-id='com.google.android.dialer:id/call_button'])[1]"))
                 .click();
+
+        Thread.sleep(10000);
+    }
+
+    private void clickDigit(String digitName) {
+        driver.findElement(AppiumBy.id("com.google.android.dialer:id/" + digitName)).click();
+    }
+
+    @Test
+    public void callfromkeypad() throws InterruptedException {
+        driver.findElement(AppiumBy.xpath(
+                "(//android.widget.ImageView[@resource-id='com.google.android.dialer:id/navigation_bar_item_icon_view'])[2]"))
+                .click();
+        Thread.sleep(1000);
+
+        clickDigit("seven");
+        clickDigit("zero");
+        clickDigit("one");
+        clickDigit("zero");
+        clickDigit("seven");
+        clickDigit("two");
+        clickDigit("eight");
+        clickDigit("two");
+        clickDigit("three");
+        clickDigit("six");
+
+        Thread.sleep(1000);
+
+        driver.findElement(AppiumBy.xpath("//android.widget.Button[@content-desc='dial']")).click();
 
         Thread.sleep(10000);
     }
