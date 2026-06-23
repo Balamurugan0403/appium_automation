@@ -1,16 +1,15 @@
 package android_learn;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import java.net.URL;
+import java.time.Duration;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.net.URL;
-import java.time.Duration;
-import java.util.List;
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 
 public class MakeCall {
 
@@ -33,8 +32,6 @@ public class MakeCall {
                 options);
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        // Explicitly launch Phone app
         driver.activateApp("com.google.android.dialer");
 
         Thread.sleep(3000);
@@ -43,10 +40,8 @@ public class MakeCall {
     }
     @Test
     public void callFirstRecentContact() throws InterruptedException {
-
-        // Click the first recent contact's call button
         driver.findElement(
-                By.xpath("(//android.widget.ImageView[@resource-id='com.google.android.dialer:id/call_button'])[1]"))
+                AppiumBy.xpath("(//android.widget.ImageView[@resource-id='com.google.android.dialer:id/call_button'])[1]"))
                 .click();
 
         Thread.sleep(10000);

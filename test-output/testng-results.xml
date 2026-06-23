@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-23T22:15:32 IST" name="Default suite" finished-at="2026-06-23T22:15:55 IST" duration-ms="22695">
+  <suite started-at="2026-06-23T23:07:43 IST" name="Default suite" finished-at="2026-06-23T23:08:27 IST" duration-ms="44463">
     <groups>
     </groups>
-    <test started-at="2026-06-23T22:15:32 IST" name="Default test" finished-at="2026-06-23T22:15:55 IST" duration-ms="22695">
-      <class name="android_learn.MakeCall">
-        <test-method is-config="true" signature="setup()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:32 IST" name="setup" finished-at="2026-06-23T22:15:42 IST" duration-ms="9612" status="PASS">
+    <test started-at="2026-06-23T23:07:43 IST" name="Default test" finished-at="2026-06-23T23:08:27 IST" duration-ms="44463">
+      <class name="android_learn.CalculatorTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:07:43 IST" name="setUp" finished-at="2026-06-23T23:07:51 IST" duration-ms="7632" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="callFirstRecentContact()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:42 IST" name="callFirstRecentContact" finished-at="2026-06-23T22:15:53 IST" duration-ms="11576" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="clearCalculator()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:07:51 IST" name="clearCalculator" finished-at="2026-06-23T23:07:56 IST" duration-ms="5648" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- callFirstRecentContact -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:53 IST" name="tearDown" finished-at="2026-06-23T22:15:55 IST" duration-ms="1382" status="PASS">
+        </test-method> <!-- clearCalculator -->
+        <test-method signature="testAddition()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:07:56 IST" name="testAddition" finished-at="2026-06-23T23:08:02 IST" duration-ms="5231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddition -->
+        <test-method is-config="true" signature="clearCalculator()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:02 IST" name="clearCalculator" finished-at="2026-06-23T23:08:02 IST" duration-ms="102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCalculator -->
+        <test-method signature="testDecimalAddition()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:02 IST" name="testDecimalAddition" finished-at="2026-06-23T23:08:11 IST" duration-ms="9140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDecimalAddition -->
+        <test-method is-config="true" signature="clearCalculator()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:11 IST" name="clearCalculator" finished-at="2026-06-23T23:08:11 IST" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCalculator -->
+        <test-method signature="testDivision()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:11 IST" name="testDivision" finished-at="2026-06-23T23:08:16 IST" duration-ms="4920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDivision -->
+        <test-method is-config="true" signature="clearCalculator()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:16 IST" name="clearCalculator" finished-at="2026-06-23T23:08:16 IST" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCalculator -->
+        <test-method signature="testMultiplication()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:16 IST" name="testMultiplication" finished-at="2026-06-23T23:08:21 IST" duration-ms="4942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMultiplication -->
+        <test-method is-config="true" signature="clearCalculator()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:21 IST" name="clearCalculator" finished-at="2026-06-23T23:08:21 IST" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearCalculator -->
+        <test-method signature="testSubtraction()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:21 IST" name="testSubtraction" finished-at="2026-06-23T23:08:27 IST" duration-ms="5913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSubtraction -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:android_learn.CalculatorTest@18f8cd79]" started-at="2026-06-23T23:08:27 IST" name="tearDown" finished-at="2026-06-23T23:08:27 IST" duration-ms="504" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- android_learn.MakeCall -->
+      </class> <!-- android_learn.CalculatorTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
