@@ -27,9 +27,9 @@ public class CallTest {
 
         options.setPlatformName("Android");
         options.setAutomationName("UiAutomator2");
-        options.setUdid("RZCY82554JT");
-        options.setAppPackage("com.samsung.android.dialer");
-        options.setAppActivity("com.samsung.android.dialer.DialtactsActivity");
+        options.setUdid("85a8798b");
+        options.setAppPackage("com.google.android.dialer");
+        options.setAppActivity("com.google.android.dialer.extensions.GoogleDialtactsActivity");
         options.setNoReset(true);
 
         driver = new AndroidDriver(
@@ -42,27 +42,48 @@ public class CallTest {
         System.out.println("Appium session created and Phone opened!");
     }
 
-    @Test
-    public void makeCall() {
+    @Test(priority = 1)
+    public void callRecentContact() {
 
         driver.findElement(
-                AppiumBy.xpath("(//android.widget.ImageView[@resource-id='com.samsung.android.dialer:id/tab_icon'])[2]"))
+                AppiumBy.xpath("//android.widget.TextView[@text='Recents']"))
                 .click();
 
         driver.findElement(
-                AppiumBy.xpath("(//android.widget.LinearLayout[@resource-id='com.samsung.android.dialer:id/container_call_log_text'])[1]"))
-                .click();
-
-        driver.findElement(
-                AppiumBy.id("com.samsung.android.dialer:id/image_view_expand_one"))
+                AppiumBy.xpath("(//android.view.ViewGroup[contains(@resource-id,'primary_action_button')])[1]"))
                 .click();
 
         WebElement calling = driver.findElement(
-                AppiumBy.id("com.samsung.android.incallui:id/call_state_label"));
+                AppiumBy.xpath("//android.widget.TextView[contains(@resource-id,'call_state')]"));
 
         Assert.assertTrue(calling.isDisplayed());
 
         System.out.println("Successfully initiated the recent call.");
+    }
+
+    @Test(priority = 2)
+    public void dialSpecificNumber() throws InterruptedException {
+
+        String phoneNumber = "9876543210";
+
+        driver.findElement(
+                AppiumBy.xpath("//android.widget.ImageButton[contains(@content-desc,'dial')]"))
+                .click();
+
+        driver.findElement(
+                AppiumBy.xpath("//android.widget.EditText[contains(@resource-id,'digits')]"))
+                .sendKeys(phoneNumber);
+
+        driver.findElement(
+                AppiumBy.xpath("//android.widget.ImageButton[contains(@content-desc,'Call')]"))
+                .click();
+
+        WebElement callStatus = driver.findElement(
+                AppiumBy.xpath("//android.widget.TextView[contains(@resource-id,'call_state')]"));
+
+        Assert.assertTrue(callStatus.isDisplayed());
+
+        System.out.println("Successfully dialed " + phoneNumber);
     }
 
     @AfterClass

@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-22T23:42:00 IST" name="Default suite" finished-at="2026-06-22T23:42:13 IST" duration-ms="12720">
+  <suite started-at="2026-06-23T22:15:32 IST" name="Default suite" finished-at="2026-06-23T22:15:55 IST" duration-ms="22695">
     <groups>
     </groups>
-    <test started-at="2026-06-22T23:42:00 IST" name="Default test" finished-at="2026-06-22T23:42:13 IST" duration-ms="12720">
-      <class name="android_learn.CallTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:android_learn.CallTest@3e78b6a5]" started-at="2026-06-22T23:42:00 IST" name="setUp" finished-at="2026-06-22T23:42:06 IST" duration-ms="5374" status="PASS">
+    <test started-at="2026-06-23T22:15:32 IST" name="Default test" finished-at="2026-06-23T22:15:55 IST" duration-ms="22695">
+      <class name="android_learn.MakeCall">
+        <test-method is-config="true" signature="setup()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:32 IST" name="setup" finished-at="2026-06-23T22:15:42 IST" duration-ms="9612" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="makeCall()[pri:0, instance:android_learn.CallTest@3e78b6a5]" started-at="2026-06-22T23:42:06 IST" name="makeCall" finished-at="2026-06-22T23:42:12 IST" duration-ms="6480" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="callFirstRecentContact()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:42 IST" name="callFirstRecentContact" finished-at="2026-06-23T22:15:53 IST" duration-ms="11576" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- makeCall -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:android_learn.CallTest@3e78b6a5]" started-at="2026-06-22T23:42:12 IST" name="tearDown" finished-at="2026-06-22T23:42:13 IST" duration-ms="787" status="PASS">
+        </test-method> <!-- callFirstRecentContact -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:android_learn.MakeCall@3e78b6a5]" started-at="2026-06-23T22:15:53 IST" name="tearDown" finished-at="2026-06-23T22:15:55 IST" duration-ms="1382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- android_learn.CallTest -->
+      </class> <!-- android_learn.MakeCall -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
