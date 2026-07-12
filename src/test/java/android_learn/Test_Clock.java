@@ -38,36 +38,30 @@ public class Test_Clock {
         driver.perform(Collections.singletonList(swipe));
     }
 
+    public int readValue(String id) {
+        WebElement el = driver.findElement(AppiumBy.id(id));
+        return (int) Double.parseDouble(el.getAttribute("text"));
+    }
+
     @Test
     public void setAlarm() throws InterruptedException {
         driver.findElement(AppiumBy.id("com.android.deskclock:id/end_btn2")).click();
         Thread.sleep(2000);
-        WebElement hour = driver.findElement(AppiumBy.id("com.android.deskclock:id/hour"));
-        int currentHour = (int) Double.parseDouble(hour.getAttribute("text"));
+
+        int currentHour = readValue("com.android.deskclock:id/hour");
         int targetHour = currentHour == 12 ? 1 : currentHour + 1;
-        int hourValue = currentHour;
-        int hourAttempts = 0;
-        while (hourValue != targetHour && hourAttempts < 30) {
-            hour = driver.findElement(AppiumBy.id("com.android.deskclock:id/hour"));
-            hourValue = (int) Double.parseDouble(hour.getAttribute("text"));
-            if (hourValue == targetHour) { break; }
+        while (readValue("com.android.deskclock:id/hour") != targetHour) {
             swipe(360, 620, 360, 500);
             Thread.sleep(1000);
-            hourAttempts++;
         }
-        WebElement minute = driver.findElement(AppiumBy.id("com.android.deskclock:id/minute"));
-        int currentMinute = (int) Double.parseDouble(minute.getAttribute("text"));
+
+        int currentMinute = readValue("com.android.deskclock:id/minute");
         int targetMinute = currentMinute == 59 ? 0 : currentMinute + 1;
-        int minuteValue = currentMinute;
-        int minuteAttempts = 0;
-        while (minuteValue != targetMinute && minuteAttempts < 60) {
-            minute = driver.findElement(AppiumBy.id("com.android.deskclock:id/minute"));
-            minuteValue = (int) Double.parseDouble(minute.getAttribute("text"));
-            if (minuteValue == targetMinute) { break; }
+        while (readValue("com.android.deskclock:id/minute") != targetMinute) {
             swipe(586, 620, 586, 500);
             Thread.sleep(1000);
-            minuteAttempts++;
         }
+
         driver.findElement(AppiumBy.id("android:id/button2")).click();
     }
 }
